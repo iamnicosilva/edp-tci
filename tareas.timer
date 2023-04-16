@@ -1,0 +1,10 @@
+[Unit]
+Description=Programar la tarea de mostrar el número de tareas programadas
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=15min
+Unit=tareas.service
+
+[Install]
+WantedBy=timers.target

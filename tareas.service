@@ -1,0 +1,9 @@
+[Unit]
+Description=Mostrar el número de tareas programadas
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'echo -n "Usted tiene "; crontab -l | wc -l | tr -d ' '; echo " tareas programadas a la fecha: $(date)"'
+
+[Install]
+WantedBy=multi-user.target
